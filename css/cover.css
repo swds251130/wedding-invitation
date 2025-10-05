@@ -267,27 +267,22 @@ header {
   text-shadow: none;
 }
 
+.section4-sec1-2 {
+  padding-top: 0.1rem;
+}
 
 .section4-sec1 {
   font-family: NanumMyeongjo-r;
-  font-size: 1.3rem;
   line-height: 1.5em;
-  min-width: 4em; /* "아버지" "어머니"의 폭을 고정시켜 정렬 맞춤 */
-  display: inline-block;
+  font-size: 1.3rem;
 }
 
 .section4-sec2 {
   font-family: NanumMyeongjo-b;
-  font-size: 1.35rem;
   line-height: 1.5em;
+  font-size: 1.35rem;
 }
 
-/* 각 줄을 flex로 좌우 정렬 */
-.honju-line {
-  display: flex;
-  align-items: baseline;
-  gap: 0.5rem;
-}
 
 
 .section4-sec3 {
