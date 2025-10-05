@@ -180,7 +180,6 @@ header {
   color: #333;
   text-shadow: none;
   font-size: 1rem;
-  text-align: right;
 }
 
 .section1-main {
@@ -198,11 +197,9 @@ header {
 
 .section1-sub2 {
   display: block;
-  width: 100%;
   font-family: NanumMyeongjo-b;
   line-height: 2.1em;
   font-size: 1.35rem;
-  text-align: right;
 }
 
 .section1-sub2 .small {
