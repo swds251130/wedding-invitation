@@ -283,23 +283,6 @@ header {
   font-size: 1.35rem;
 }
 
-.section4-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 4px;
-}
-
-.label {
-    display: inline-block;
-    width: 50px;  /* 라벨 너비 고정 */
-    font-weight: bold;
-}
-
-.name {
-    display: inline-block;
-}
-
-
 .section4-sec3 {
   font-family: NanumMyeongjo-b;
   line-height: 1.5em;
