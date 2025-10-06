@@ -193,25 +193,21 @@
                 <div class="row">
                     <div class="col-6 section4-sec1-2">
                         <span class="section4-sec1">신랑</span>
-                        &nbsp&nbsp
+                        &nbsp&nbsp&nbsp
                         <span class="section4-sec2">박상욱</span>
                     </div>
                     <div class="col">
                         <button onclick="document.location.href='tel:010-9448-0219'" class="section4-sec3">
-                            <svg width="1.3em" height="1.5em" viewBox="0 0 16 16" class="bi bi-telephone-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-telephone-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z"/>
                             </svg>
                         </button>
-                        &nbsp
+                        &nbsp&nbsp&nbsp
                         <button onclick="document.location.href='sms:010-9448-0219'" class="section4-sec3">
-                            <svg width="1.3em" height="1.5em" viewBox="0 0 16 16" class="bi bi-chat-dots-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-chat-dots-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
                             </svg>
                         </button>
-                        &nbsp
-                        <a href="https://link.kakaopay.com/__/lgxnZ9Y" target="_blank">
-                        <img src="btn_send_small.png" alt="카카오페이 송금" style="width:120px; height:45px; cursor:pointer;">
-                        </a>
                         </div>
                 </div>
                 <br/><br/>
@@ -267,26 +263,29 @@
         <div class="wow fadeInUp section7 inner cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
             <br/><br/>
             <p class="wow fadeInUp section7-title section7-main">신랑 신부에게 마음 전하기</p>
-            <br/>
+
             <!-- Button trigger modal -->
             <button type="button" class="wow fadeInUp btn section7-button" data-toggle="modal" data-target="#groom">
-                신랑 혼주 계좌번호 보기
+                신랑측 계좌번호 보기
             </button>
             <div class="modal fade" id="groom" tabindex="-1" aria-labelledby="groom" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title section7-modal section7-modal-title" id="groomLabel">신랑 혼주 계좌번호 보기</h5>
+                        <h5 class="modal-title section7-modal section7-modal-title" id="groomLabel">신랑측 계좌번호 보기</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body section7-modal section7-modal-content">
-                        신랑 혼주<br/>
-                        박은관 : 농협 <span id="account1">312-0135-2562-41</span>
-                        <button class="btn btn-sm btn-primary" style="margin-left:5px;"onclick="copyAccount('account1')">복사</button><br/>
-                        조해주 : 국민 <span id="account2">093401-04-122273</span>
-                        <button class="btn btn-sm btn-primary" onclick="copyAccount('account2')">복사</button>
+                        <br/>
+                        부&nbsp&nbsp&nbsp&nbsp : 박은관 <span id="account1">농협 312-0135-2562-41</span>
+                        <button class="btn btn-sm btn-primary" style="margin-left:20px;"onclick="copyAccount('account1')">복사</button><br/><br/>
+                        모&nbsp&nbsp&nbsp&nbsp : 조해주 <span id="account2">국민 093401-04-122273</span>
+                        <button class="btn btn-sm btn-primary" style="margin-left:14px;" onclick="copyAccount('account2')">복사</button><br/><br/>
+                        신랑&nbsp : 박상욱 <span id="account3">하나 363-910455-08207</span>
+                        <button class="btn btn-sm btn-primary" style="margin-left:9px;"onclick="copyAccount('account3')">복사</button>
+
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
@@ -312,7 +311,7 @@
                         </div>
                         <div class="modal-body section7-modal section7-modal-content">
                             신부 혼주<br/>
-                            편경회 : 신한 <span id="account3">110-004-158266&nbsp</span>
+                            편경회 : 신한 <span id="account4">110-004-158266&nbsp</span>
                         <button class="btn btn-sm btn-primary" onclick="copyAccount('account3')">복사</button><br/>
                         </div>
                         <div class="modal-footer">
