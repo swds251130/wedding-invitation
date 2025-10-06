@@ -389,44 +389,39 @@
                 </p>
             </div>
             <br/>
-            <div id="map" class="wow fadeInUp" style="width:100%;height:350px;"></div>
-            <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=991a8a3b8d189e3ccb82b8d6646a6886"></script>
+            <div id="map" style="width:100%;height:350px;"></div>
+            <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=991a8a3b8d189e3ccb82b8d6646a6886"></script>
             <script>
-                var mapContainer = document.getElementById('map'), // 지도를 표시할 div
-                    mapOption = {
-                        center: new kakao.maps.LatLng(37.571515, 127.015160), // 지도의 중심좌표
-                        level: 3 // 지도의 확대 레벨
-                    };
-
-                var map = new kakao.maps.Map(mapContainer, mapOption);
-                var markerPosition  = new kakao.maps.LatLng(37.571515, 127.015160);
-
-                // 마커를 생성합니다
-                var marker = new kakao.maps.Marker({
-                    position: markerPosition
-                });
-
-                // 마커가 지도 위에 표시되도록 설정합니다
-                marker.setMap(map);
+            window.onload = function() {
+              var mapContainer = document.getElementById('map');
+              var mapOption = {
+                center: new kakao.maps.LatLng(37.571515, 127.015160),
+                level: 3
+              };
+              var map = new kakao.maps.Map(mapContainer, mapOption);
+              var marker = new kakao.maps.Marker({
+                position: new kakao.maps.LatLng(37.571515, 127.015160)
+              });
+              marker.setMap(map);
+            };
             </script>
-<!--            <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=991a8a3b8d189e3ccb82b8d6646a6886"></script>-->
+
+<!--            &lt;!&ndash; ✅ 1. Kakao 지도 SDK 먼저 로드 &ndash;&gt;-->
+<!--            <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=991a8a3b8d189e3ccb82b8d6646a6886"></script>-->
+<!--            -->
+<!--            &lt;!&ndash; ✅ 2. 그 다음에 지도 초기화 코드 실행 &ndash;&gt;-->
 <!--            <script>-->
-<!--                var mapContainer = document.getElementById('map'), // 지도를 표시할 div-->
-<!--                    mapOption = {-->
-<!--                        center: new kakao.maps.LatLng(37.571715, 127.015160), // 지도의 중심좌표-->
-<!--                        level: 3 // 지도의 확대 레벨-->
-<!--                    };-->
+<!--              var mapContainer = document.getElementById('map'),-->
+<!--                  mapOption = {-->
+<!--                    center: new kakao.maps.LatLng(37.571515, 127.015160),-->
+<!--                    level: 3-->
+<!--                  };-->
 
-<!--                var map = new kakao.maps.Map(mapContainer, mapOption);-->
-<!--                var markerPosition  = new kakao.maps.LatLng(37.571715, 127.015160);-->
-
-<!--                // 마커를 생성합니다-->
-<!--                var marker = new kakao.maps.Marker({-->
-<!--                    position: markerPosition-->
-<!--                });-->
-
-<!--                // 마커가 지도 위에 표시되도록 설정합니다-->
-<!--                marker.setMap(map);-->
+<!--              var map = new kakao.maps.Map(mapContainer, mapOption);-->
+<!--              var marker = new kakao.maps.Marker({-->
+<!--                position: new kakao.maps.LatLng(37.571515, 127.015160)-->
+<!--              });-->
+<!--              marker.setMap(map);-->
 <!--            </script>-->
             <div class="wow fadeInUp section6-location p-3">
                 <div class="accordion" id="accordionExample">
