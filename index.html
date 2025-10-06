@@ -279,9 +279,9 @@
                     </div>
                     <div class="modal-body section7-modal section7-modal-content">
                         신랑 혼주<br/>
-                        박은관 : 농협<span id="account1">312-0135-2562-41&nbsp</span>
-                        <button class="btn btn-sm btn-primary" onclick="copyAccount('account1')">복사</button><br/>
-                        조해주 : 국민<span id="account2">093401-04-122273</span>
+                        박은관 : 농협 <span id="account1">312-0135-2562-41</span>
+                        <button class="btn btn-sm btn-primary" style="margin-left:5px;"onclick="copyAccount('account1')">복사</button><br/>
+                        조해주 : 국민 <span id="account2">093401-04-122273</span>
                         <button class="btn btn-sm btn-primary" onclick="copyAccount('account2')">복사</button>
                     </div>
                     <div class="modal-footer">
@@ -291,20 +291,7 @@
             </div>
         </div>
 
-        <script>
-        function copyAccount(id) {
-            // 계좌번호 텍스트 가져오기
-            const text = document.getElementById(id).innerText;
 
-            // 클립보드에 복사
-            navigator.clipboard.writeText(text).then(() => {
-                alert('계좌번호가 복사되었습니다: ' + text);
-            }).catch(err => {
-                alert('복사에 실패했습니다.');
-                console.error(err);
-            });
-        }
-        </script>
             <!-- Button trigger modal -->
             <button type="button" class="wow fadeInUp btn section7-button" data-toggle="modal" data-target="#bride">
                 신부 혼주 계좌번호 보기
@@ -321,7 +308,7 @@
                         </div>
                         <div class="modal-body section7-modal section7-modal-content">
                             신부 혼주<br/>
-                            편경회 : 신한<span id="account3">110-004-158266&nbsp</span>
+                            편경회 : 신한 <span id="account3">110-004-158266&nbsp</span>
                         <button class="btn btn-sm btn-primary" onclick="copyAccount('account3')">복사</button><br/>
                         </div>
                         <div class="modal-footer">
@@ -331,6 +318,20 @@
                 </div>
             </div>
             <br/><br/>
+                    <script>
+        function copyAccount(id) {
+            // 계좌번호 텍스트 가져오기
+            const text = document.getElementById(id).innerText;
+
+            // 클립보드에 복사
+            navigator.clipboard.writeText(text).then(() => {
+                alert('계좌번호가 복사되었습니다: ' + text);
+            }).catch(err => {
+                alert('복사에 실패했습니다.');
+                console.error(err);
+            });
+        }
+        </script>
         </div>
         <br/><br/>
         <div class="wow fadeInUp section5 inner cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
