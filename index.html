@@ -268,27 +268,64 @@
             <button type="button" class="wow fadeInUp btn section7-button" data-toggle="modal" data-target="#groom">
                 신랑 혼주 계좌번호 보기
             </button>
-            <!-- Modal -->
             <div class="modal fade" id="groom" tabindex="-1" aria-labelledby="groom" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title section7-modal section7-modal-title" id="groomLabel">신랑 혼주 계좌번호 보기</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body section7-modal section7-modal-content">
-                            신랑 혼주<br/>
-                            박은관 : 농협 312-0135-2562-41<br/>
-                            <span>&nbsp<span/>조해주 : 국민 093401-04-122273
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
-                        </div>
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title section7-modal section7-modal-title" id="groomLabel">신랑 혼주 계좌번호 보기</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body section7-modal section7-modal-content">
+                        신랑 혼주<br/>
+                        박은관 : <span id="account1">농협 312-0135-2562-41</span>
+                        <button class="btn btn-sm btn-primary" onclick="copyAccount('account1')">복사</button><br/>
+                        조해주 : <span id="account2">국민 093401-04-122273</span>
+                        <button class="btn btn-sm btn-primary" onclick="copyAccount('account2')">복사</button>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <script>
+        function copyAccount(id) {
+            // 계좌번호 텍스트 가져오기
+            const text = document.getElementById(id).innerText;
+
+            // 클립보드에 복사
+            navigator.clipboard.writeText(text).then(() => {
+                alert('계좌번호가 복사되었습니다: ' + text);
+            }).catch(err => {
+                alert('복사에 실패했습니다.');
+                console.error(err);
+            });
+        }
+        </script>
+<!--            &lt;!&ndash; Modal &ndash;&gt;-->
+<!--            <div class="modal fade" id="groom" tabindex="-1" aria-labelledby="groom" aria-hidden="true">-->
+<!--                <div class="modal-dialog modal-dialog-centered">-->
+<!--                    <div class="modal-content">-->
+<!--                        <div class="modal-header">-->
+<!--                            <h5 class="modal-title section7-modal section7-modal-title" id="groomLabel">신랑 혼주 계좌번호 보기</h5>-->
+<!--                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--                                <span aria-hidden="true">&times;</span>-->
+<!--                            </button>-->
+<!--                        </div>-->
+<!--                        <div class="modal-body section7-modal section7-modal-content">-->
+<!--                            신랑 혼주<br/>-->
+<!--                            박은관 : 농협 312-0135-2562-41<br/>-->
+<!--                            <span>&nbsp<span/>조해주 : 국민 093401-04-122273-->
+<!--                        </div>-->
+<!--                        <div class="modal-footer">-->
+<!--                            <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
             <!-- Button trigger modal -->
             <button type="button" class="wow fadeInUp btn section7-button" data-toggle="modal" data-target="#bride">
                 신부 혼주 계좌번호 보기
@@ -403,46 +440,6 @@
                 position: new kakao.maps.LatLng(37.571515, 127.015160)
               });
               marker.setMap(map);
-            </script>
-
-            <!-- ✅ 내비게이션 버튼 -->
-            <div style="display:flex; justify-content:center; gap:10px; margin-top:15px; flex-wrap:wrap;">
-              <!-- TMAP -->
-              <a href="tmap://route?goalx=127.015160&goaly=37.571515&goalname=웨딩홀"
-                 style="background-color:#FF6600; color:white; padding:10px 20px; border-radius:8px; text-decoration:none; font-weight:600;">
-                 TMAP 길찾기
-              </a>
-
-              <!-- Kakao 내비 -->
-              <a href="kakaonavi://navigate?name=웨딩홀&lat=37.571515&lon=127.015160"
-                 onclick="if(navigator.userAgent.match(/Android|iPhone/i)){}else{alert('모바일에서만 실행 가능합니다');return false;}"
-                 style="background-color:#FEE500; color:#3C1E1E; padding:10px 20px; border-radius:8px; text-decoration:none; font-weight:600;">
-                 카카오내비
-              </a>
-
-              <!-- Naver 지도 -->
-              <a href="nmap://route/car?dlat=37.571515&dlng=127.015160&dname=웨딩홀"
-                 style="background-color:#03C75A; color:white; padding:10px 20px; border-radius:8px; text-decoration:none; font-weight:600;">
-                 네이버지도
-              </a>
-            </div>
-
-            <!-- ✅ iOS용 fallback (앱 미설치 시 웹으로 열기) -->
-            <script>
-              document.querySelectorAll('a').forEach(a => {
-                a.addEventListener('click', function(e) {
-                  setTimeout(() => {
-                    if (document.visibilityState === 'visible') {
-                      // 앱이 설치되어 있지 않으면 웹 링크로 연결
-                      if (this.href.includes('nmap://')) {
-                        window.location.href = 'https://map.naver.com/v5/directions/-/-/-/'+encodeURIComponent('웨딩홀')+'/37.571515,127.015160';
-                      } else if (this.href.includes('kakaonavi://')) {
-                        window.location.href = 'https://kakaonavi.kakao.com/launch?appkey=991a8a3b8d189e3ccb82b8d6646a6886&name=웨딩홀&x=127.015160&y=37.571515';
-                      }
-                    }
-                  }, 1000);
-                });
-              });
             </script>
             <div class="wow fadeInUp section6-location p-3">
                 <div class="accordion" id="accordionExample">
