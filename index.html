@@ -71,8 +71,8 @@
 <body class="text-center">
 <div class="top-div">
     <header class="inner cover cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-        <h1 class="wow fadeIn cover-heading" style="text-align: right; margin-top: 0.5em; margin-right: 0.5em; font-size: 2rem; color:black">
-            <span style="letter-spacing : -0.13em; margin-right: 0.1em">⎽⎽</span><br/>
+        <h1 class="wow fadeIn cover-heading" style="text-align: right; margin-top: 0.5em; margin-right: 0.5em; font-size: 2rem; color: #36454F">
+            <span style="letter-spacing : -0.1em; margin-right: 0.1em">⎽⎽</span><br/>
             11 <br/>
             月 <br/>
             30 <br/>
@@ -291,15 +291,7 @@
                             <button class="btn btn-sm btn-primary" onclick="copyAccount('account3')">복사</button>
                         </div>
                     </div>
-<!--                    <div class="modal-body section7-modal section7-modal-content">-->
-<!--                        <br/>-->
-<!--                        부&nbsp&nbsp&nbsp&nbsp : 박은관 <span id="account1">농협 312-0135-2562-41</span>-->
-<!--                        <button class="btn btn-sm btn-primary" style="margin-left:10px;"onclick="copyAccount('account1')">복사</button><br/><br/>-->
-<!--                        모&nbsp&nbsp&nbsp&nbsp : 조해주 <span id="account2">국민 093401-04-122273</span>-->
-<!--                        <button class="btn btn-sm btn-primary" style="margin-left:7px;" onclick="copyAccount('account2')">복사</button><br/><br/>-->
-<!--                        신랑&nbsp : 박상욱 <span id="account3">하나 363-910455-08207</span>-->
-<!--                        <button class="btn btn-sm btn-primary" style="margin-left:4px;"onclick="copyAccount('account3')">복사</button>-->
-<!--                    </div>-->
+
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
                     </div>
@@ -317,15 +309,20 @@
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title section7-modal section7-modal-title" id="brideLabel">신부 혼주 계좌번호 보기</h5>
+                            <h5 class="modal-title section7-modal section7-modal-title" id="brideLabel">신부측 계좌번호 보기</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body section7-modal section7-modal-content">
-                            신부 혼주<br/>
-                            편경회 : 신한 <span id="account4">110-004-158266&nbsp</span>
-                        <button class="btn btn-sm btn-primary" onclick="copyAccount('account3')">복사</button><br/>
+                            <div class="account-row">
+                            모&nbsp;: 편경회 <span id="account4">신한 110-004-158266&nbsp</span>
+                            <button class="btn btn-sm btn-primary" onclick="copyAccount('account4')">복사</button>
+                        </div>
+                            <div class="account-row">
+                            신부&nbsp;: 김다슬 <span id="account5">신한 110-413-979569&nbsp</span>
+                            <button class="btn btn-sm btn-primary" onclick="copyAccount('account5')">복사</button>
+                        </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
